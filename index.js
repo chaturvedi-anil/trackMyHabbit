@@ -5,6 +5,9 @@ const bodyParser=require('body-parser');
 const app= express();
 const db=require('./config/mongoose');
 
+// for authentication
+const passport=require('passport');
+
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
