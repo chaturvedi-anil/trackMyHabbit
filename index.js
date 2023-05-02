@@ -7,6 +7,7 @@ const db=require('./config/mongoose');
 
 // for authentication
 const passport=require('passport');
+const passportLocal=require('./config/passport-local-strategy');
 
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
