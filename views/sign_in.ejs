@@ -7,10 +7,21 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" href="/css/sign_in.css">
 </head>
 <body>
-    <h1>
-        Sign In
-    </h1>
+    <div class="main">  	
+        <div class="signup">
+            <form action="/users/create-session" method="post">
+                <label for="chk" aria-hidden="true">Sign In</label>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+            </form>
+            <button type="submit">
+                <a href="/users/sing_up">Sing Up</a>
+            </button>
+        </div>
+	</div>
 </body>
 </html>
