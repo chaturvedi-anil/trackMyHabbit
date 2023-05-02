@@ -12,6 +12,8 @@ const passportLocal=require('./config/passport-local-strategy');
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(express.static('./assets'));
+
 // setup view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');

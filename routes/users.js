@@ -7,4 +7,6 @@ router.get('/sign_in',userController.signIn);
 router.get('/sign_up', userController.singUp);
 router.get('/profile:id', passport.checkAuthentication ,userController.profile);
 
+router.post('/create', userController.createUser);
+
 module.exports = router;

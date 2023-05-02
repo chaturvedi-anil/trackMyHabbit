@@ -17,3 +17,8 @@ module.exports.singUp = function(req, res)
         title: 'Sign Up'
     });
 }
+
+module.exports.createUser = function(req, res)
+{
+    
+}
