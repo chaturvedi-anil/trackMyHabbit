@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="/css/sign_in.css">
 </head>
 <body>
-    <div class="main">  	
-        <div class="signup">
+    <main>
+        <div>
+            <h1>Log In</h1>
+            <p>register yourself?<a href="/users/create">Sign Up</a></p>
+        </div>
+        <div class="signin">
             <form action="/users/create-session" method="post">
-                <label for="chk" aria-hidden="true">Sign In</label>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="email" name="email" id="" placeholder="email id" required>
+                <input type="password" name="password" id="" placeholder="password" required>
                 <button type="submit">Sign In</button>
             </form>
-            <button type="submit">
-                <a href="/users/sing_up">Sing Up</a>
-            </button>
         </div>
-	</div>
+    </main>
 </body>
 </html>

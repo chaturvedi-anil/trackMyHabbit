@@ -2,9 +2,10 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('../models/users');
 
+// authentication using passport
 passport.use(new LocalStrategy(
     {
-        username:'email'
+        usernameField: 'email'
     },
     function(email, password, done)
     {
@@ -21,7 +22,7 @@ passport.use(new LocalStrategy(
         })
         .catch((err)=>
         {
-            console.log(`error in finding the user in db ${err}`);
+            console.log(`error in finding the user in -----passport     ${err}`);
             return done(err);
         });
     }

@@ -21,6 +21,7 @@ module.exports.singUp = function(req, res)
 
 module.exports.createUser = function(req, res)
 {
+
     let user=User.findOne({email:req.body.email})
     .then((user)=>
     {   
@@ -31,16 +32,22 @@ module.exports.createUser = function(req, res)
                 User.create(req.body);
                 console.log(`user created`);
 
-                return res.redirect('/users/sign_in');
+                return res.redirect('/users/sign-in');
             }
 
             console.log(`password and confirm password should be same`);
-            return res.redirect('/users/sign_up');
+            return res.redirect('/users/sign-up');
         }
     })
     .catch((err)=>
     {
         console.log(`error in creating user ${err}`);
-        return res.redirect('/users/sign_up');
+        return res.redirect('/users/sign-up');
     });
+}
+
+// sign In
+module.exports.createSession = function(req, res)
+{
+    return res.redirect('/users/profile');
 }
