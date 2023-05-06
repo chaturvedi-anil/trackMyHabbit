@@ -9,9 +9,17 @@ const session=require('express-session');
 const passport=require('passport');
 const passportLocal=require('./config/passport-local-strategy');
 const MongoDBStore=require('connect-mongodb-session')(session);
+const sassMiddleware = require('node-sass-middleware'); 
 
+app.use(sassMiddleware({
+    src: './assets/scss',    // Source directory for Sass files
+    dest: './assets/css',    // Destination directory for compiled CSS files
+    debug: true,            // Enable debug mode (optional)
+    outputStyle: 'expanded',// Output style for compiled CSS (optional)
+    prefix: '/css'          // URL prefix for the CSS files (optional)
+  }));
 //setup body parser
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static('./assets'));
 
