@@ -10,6 +10,8 @@ const passport=require('passport');
 const passportLocal=require('./config/passport-local-strategy');
 const MongoDBStore=require('connect-mongodb-session')(session);
 const sassMiddleware = require('node-sass-middleware'); 
+const flash = require('connect-flash');
+const customMiddleware = require('./config/middleware');
 
 app.use(sassMiddleware({
     src: './assets/scss',    // Source directory for Sass files
@@ -55,7 +57,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticateUser);
-
+// flash uses session for storage thats why you have to use this after the session 
+app.use(flash());
+app.use(customMiddleware.setFlash);
 // this is for routes, it will automatically fetches the index.js in routes folder
 app.use('/', require('./routes'));
 
