@@ -57,6 +57,8 @@ module.exports.createUser = function(req, res)
 // sign In
 module.exports.createSession = function(req, res)
 {
+
+    console.log(req);
     req.flash('success', 'Logged in Successfully');
     return res.redirect('/');
 }
