@@ -39,7 +39,7 @@ module.exports.createUser = function(req, res)
             {
                 User.create(req.body);
                 console.log(`user created`);
-
+                
                 return res.redirect('/users/sign-in');
             }
 
