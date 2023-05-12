@@ -22,6 +22,7 @@ module.exports.singUp = function(req, res)
     {
         return res.redirect('/users/profile');
     }
+    console.log('singup');
     return res.render('sign_up',{
         title: 'Sign Up'
     });
@@ -29,6 +30,7 @@ module.exports.singUp = function(req, res)
 
 module.exports.createUser = function(req, res)
 {
+    console.log('create user function');
 
     let user=User.findOne({email:req.body.email})
     .then((user)=>
@@ -57,8 +59,6 @@ module.exports.createUser = function(req, res)
 // sign In
 module.exports.createSession = function(req, res)
 {
-
-    console.log(req);
     req.flash('success', 'Logged in Successfully');
     return res.redirect('/');
 }
