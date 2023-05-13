@@ -16,14 +16,12 @@ let transporter = nodemailer.createTransport({
 let renderTemplate = (data, relativePath)=>
 {
     let mailHTML;
-    ejs.renderFile(
-        path.join(__dirname, '../view/mailer'),
-        data,
+    ejs.renderFile(path.join(__dirname, '../views/mailers', relativePath), data,
         function(err, template)
         {
             if(err)
             {
-                console.log('error in rendring template in nodemailer');
+                console.log('error in rendring template in nodemailer', err);
                 return;
             }
 
@@ -35,7 +33,7 @@ let renderTemplate = (data, relativePath)=>
     return mailHTML;
 }
 
-module.exports={
+module.exports = {
     transporter:transporter,
     renderTemplate:renderTemplate
 }

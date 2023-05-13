@@ -24,7 +24,7 @@ module.exports.singUp = function(req, res)
     {
         return res.redirect('/users/profile');
     }
-    console.log('singup');
+    
     return res.render('sign_up',{
         title: 'Sign Up'
     });

@@ -2,6 +2,7 @@ const passport = require('passport');
 const googleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const crypto=require('crypto');
 const User=require('../models/users');
+const userMailer=require('../mailers/users_mailer');
 
 // tell passport to use google strategy
 passport.use(new googleStrategy({
@@ -32,7 +33,9 @@ passport.use(new googleStrategy({
                 })
                 .then((user)=>
                 {
-                    console.log('inside else then');
+                    console.log(user);
+                    userMailer.newUser(user.email);
+                    console.log('usermailer executed');
                     return done(null, user);
                 })
                 .catch((err)=>

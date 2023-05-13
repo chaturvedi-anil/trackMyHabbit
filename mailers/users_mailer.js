@@ -2,12 +2,15 @@ const nodeMailer = require('../config/nodemailer');
 
 exports.newUser = (email)=>
 {
+    console.log('innside newuser');
+    let htmlContent = nodeMailer.renderTemplate({email:email}, '/users/welcome.ejs');
 
+    console.log('after rendering innside newuser');
     nodeMailer.transporter.sendMail({
         from: 'codingwa90@gmail.com',
         to: email,
         subject: "new user created",
-        html: '<h1> Your account is created on trackMyHabbit </h1>'
+        html: htmlContent
     }, (err, info)=>
     {
         if(err)
