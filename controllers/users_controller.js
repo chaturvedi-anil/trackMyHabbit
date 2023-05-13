@@ -1,5 +1,7 @@
 const User=require('../models/users');
-const userMailer = require('../mailers//users_mailer');
+const userMailer = require('../mailers/users_mailer');
+const queue=require('../config/kue');
+const userWorkers=require('../workers/users_email_worker');
 
 module.exports.profile = function(req, res)
 {
@@ -41,10 +43,18 @@ module.exports.createUser = function(req, res)
             {
                 User.create(req.body);
 
-                console.log(`user created`, req.body.email);
+                // userMailer.newUser(req.body.email);
 
-                userMailer.newUser(req.body.email);
-                console.log('usermailer executed');
+                let job = queue.create('newUser', req.body.email).save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log('error in creating a queue', err);
+                        return;
+                    }
+
+                    console.log("job complete : ",job.id);
+                });
 
                 return res.redirect('/users/sign-in');
             }
