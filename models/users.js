@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const userSchema = mongoose.Schema({
+const userSchema =new mongoose.Schema({
     email:
     {
         type:String,
@@ -16,7 +16,14 @@ const userSchema = mongoose.Schema({
     {
         type: String,
         required: true
-    }
+    },
+    habbit:
+    [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Habbit'
+        }
+    ]
 },
 {
     timestamps: true 

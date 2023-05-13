@@ -1,4 +1,6 @@
 const User=require('../models/users');
+const userMailer = require('../mailers//users_mailer');
+
 module.exports.profile = function(req, res)
 {
     return res.render('profile',{
@@ -30,8 +32,6 @@ module.exports.singUp = function(req, res)
 
 module.exports.createUser = function(req, res)
 {
-    console.log('create user function');
-
     let user=User.findOne({email:req.body.email})
     .then((user)=>
     {   
@@ -40,8 +40,12 @@ module.exports.createUser = function(req, res)
             if(req.body.password == req.body.confirm_password)
             {
                 User.create(req.body);
-                console.log(`user created`);
-                
+
+                console.log(`user created`, req.body.email);
+
+                userMailer.newUser(req.body.email);
+                console.log('usermailer executed');
+
                 return res.redirect('/users/sign-in');
             }
 
