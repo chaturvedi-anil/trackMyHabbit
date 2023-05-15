@@ -32,7 +32,7 @@ module.exports.singUp = function(req, res)
     });
 }
 
-module.exports.createUser = function(req, res)
+module.exports.createUser = async function(req, res)
 {
     let user=User.findOne({email:req.body.email})
     .then((user)=>
@@ -42,9 +42,7 @@ module.exports.createUser = function(req, res)
             if(req.body.password == req.body.confirm_password)
             {
                 User.create(req.body);
-
-                // userMailer.newUser(req.body.email);
-
+                
                 let job = queue.create('newUser', req.body.email).save(function(err)
                 {
                     if(err)
@@ -53,9 +51,8 @@ module.exports.createUser = function(req, res)
                         return;
                     }
 
-                    console.log("job complete : ",job.id);
-                });
-
+                    console.log("job enqueued: ",job.id); 
+                });                
                 return res.redirect('/users/sign-in');
             }
 

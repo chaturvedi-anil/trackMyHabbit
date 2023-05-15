@@ -3,6 +3,7 @@ const googleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const crypto=require('crypto');
 const User=require('../models/users');
 const userMailer=require('../mailers/users_mailer');
+const queue=require('../config/kue');
 
 // tell passport to use google strategy
 passport.use(new googleStrategy({
@@ -33,9 +34,19 @@ passport.use(new googleStrategy({
                 })
                 .then((user)=>
                 {
-                    console.log(user);
-                    userMailer.newUser(user.email);
-                    console.log('usermailer executed');
+                    // console.log(user);
+                    // userMailer.newUser(user.email);
+                    // console.log('usermailer executed');
+                    let job = queue.create('newUser', req.body.email).save(function(err)
+                    {
+                        if(err)
+                        {
+                            console.log('error in creating a queue', err);
+                            return;
+                        }
+
+                        console.log("job enqueued: ",job.id); 
+                    }); 
                     return done(null, user);
                 })
                 .catch((err)=>

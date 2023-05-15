@@ -5,6 +5,6 @@ const userMailer=require('../mailers/users_mailer');
 queue.process('newUser', function(job, done)
 {
     console.log('inside worker', job.data);
-
+    userMailer.newUser(job.data); 
     done();
-})
+});
