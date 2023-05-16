@@ -6,6 +6,7 @@ router.get('/', homeController.home);
 
 router.use('/api', require('./api'));
 router.use('/users', require('./users'));
+router.use('/habbit', require('./habbits'));
 
 
 module.exports=router;

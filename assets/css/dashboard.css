@@ -1,0 +1,23 @@
+#sidebar {
+  height: 100%;
+  width: 25%;
+  background-color: azure;
+  display: flex;
+  border: 2px solid red;
+}
+
+#sidebar ul {
+  display: flex;
+}
+
+#sidebar ul li {
+  list-style: none;
+}
+
+#habbit-list {
+  height: 100%;
+  width: 50%;
+  background-color: azure;
+  display: flex;
+  border: 2px solid #3cff00;
+}

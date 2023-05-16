@@ -37,7 +37,7 @@ passport.use(new googleStrategy({
                     // console.log(user);
                     // userMailer.newUser(user.email);
                     // console.log('usermailer executed');
-                    let job = queue.create('newUser', req.body.email).save(function(err)
+                    let job = queue.create('newUser', user).save(function(err)
                     {
                         if(err)
                         {
