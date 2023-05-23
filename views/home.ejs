@@ -1,65 +1,56 @@
-    <title>trackMyHabbit</title>
-    <!-- noty js cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <nav id="nav-bar">
-        <h2>trackMyHabbit</h2>
-        <ul id="nav-bar-option">
-            <% if(locals.user){%>
-                <li>
-                    <a href="/habbit/dashboard"> Dashboard </a>
-                </li>
-                <li>
-                    <a href="/users/profile"> Profile </a>
-                </li>
-                <li>
-                    <a href="/users/destroy-session"> Sign Out</a>
-                </li>
-                <li>
-                    <a href="#footer">Contact Us</a>
-                </li>
-            <% } else{%>
-                
-                <li>
-                    <a href="/users/sign-in">Sign In</a>
-                </li>
-                <li>
-                    <a href="/users/sign-up">Sing Up</a>
-                </li>
-                <li>
-                    <a href="#footer">Contact Us</a>
-                </li>
-            <% } %>
+<!-- noty js cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<main id="nav-bar">
+    <ul id="nav-bar-option">
+        <% if(locals.user){%>
+            <li>
+                <a href="/habbit/dashboard"> Dashboard </a>
+            </li>
+            <li>
+                <a href="/users/profile"> Profile </a>
+            </li>
+            <li>
+                <a href="/users/destroy-session"> Sign Out</a>
+            </li>
+            <li>
+                <a href="#footer">Contact Us</a>
+            </li>
+        <% } else{%>
             
-
-        </ul>
-    </nav>
-    <main>
-        main body
-    </main>
-
-    <footer>
+            <li>
+                <a href="/users/sign-in">Sign In</a>
+            </li>
+            <li>
+                <a href="/users/sign-up">Sing Up</a>
+            </li>
+            <li>
+                <a href="#footer">Contact Us</a>
+            </li>
+        <% } %>
         
-    </footer>
 
-    <script>
-        <% if(flash.success && flash.success.length >0) {%>
-            new Noty({
-                theme: 'relax',
-                text: "<%= flash.success %>",
-                type: 'success',
-                timeout: 1500,
+    </ul>
+</main>
 
-            }).show(); 
-        <% } %>
+<script>
+    <% if(flash.success && flash.success.length >0) {%>
+        new Noty({
+            theme: 'relax',
+            text: "<%= flash.success %>",
+            type: 'success',
+            timeout: 1500,
 
-        <% if(flash.error && flash.error.length >0) {%>
-            new Noty({
-                theme: 'relax',
-                text: "<%= flash.error %>",
-                type: 'error',
-                timeout: 1500,
+        }).show(); 
+    <% } %>
 
-            }).show(); 
-        <% } %>
-    </script>
+    <% if(flash.error && flash.error.length >0) {%>
+        new Noty({
+            theme: 'relax',
+            text: "<%= flash.error %>",
+            type: 'error',
+            timeout: 1500,
+
+        }).show(); 
+    <% } %>
+</script>

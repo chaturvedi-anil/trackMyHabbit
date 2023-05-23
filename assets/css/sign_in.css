@@ -1,4 +1,77 @@
 body {
   margin: 0px;
-  background: lightgrey;
+  text-align: center;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+body #container {
+  position: absolute;
+  top: 15%;
+  left: 38%;
+  margin-bottom: 10px !important;
+  width: 25vw;
+  font-size: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px 0px #a8a6a6, 0px 3px 20px 0px #a8a6a6;
+}
+
+body #container .signin form {
+  display: flex;
+  flex-direction: column;
+}
+
+body #container .signin form input {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  margin: 1rem;
+  border-radius: 50px;
+}
+
+body #container .signin form button {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  margin: 1rem;
+  border-radius: 50px;
+  background-color: #5074df;
+  color: white;
+}
+
+body #container .signin form button:hover {
+  background-color: #2052eb;
+}
+
+body #container .or {
+  margin: -2px;
+}
+
+body #container #social-container {
+  margin: 0.5rem;
+}
+
+body #container #social-container .social {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 50px;
+  width: 95%;
+  margin: 1rem 0rem;
+  background-color: #f23f3f;
+}
+
+body #container #social-container .social a {
+  text-decoration: none;
+  color: white;
+}
+
+body #container #social-container .social:hover {
+  background-color: red;
+}
+
+body #container .joinNow a {
+  text-decoration: none;
+  color: white;
+}
+
+body #container .joinNow:hover {
+  text-decoration: underline;
 }

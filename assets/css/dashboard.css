@@ -1,23 +1,47 @@
-#sidebar {
-  height: 100%;
-  width: 25%;
+body {
+  margin: 0px;
+}
+
+body h1 {
+  text-align: center;
+}
+
+body #container {
+  height: 100vh;
+  width: 100vw;
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+body #container #sidebar {
+  height: 100vh;
+  width: 20%;
   background-color: azure;
-  display: flex;
-  border: 2px solid red;
+  border-right: 2px solid #bebdbd;
 }
 
-#sidebar ul {
+body #container #sidebar ul {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px;
 }
 
-#sidebar ul li {
+body #container #sidebar ul li {
   list-style: none;
+  font-size: 1.5rem;
+  padding: 0.2re;
 }
 
-#habbit-list {
-  height: 100%;
-  width: 50%;
-  background-color: azure;
-  display: flex;
-  border: 2px solid #3cff00;
+body #container #sidebar ul li a {
+  text-decoration: none;
+}
+
+body #container #habbit-list {
+  height: 100vh;
+  width: 60%;
+  background-color: white;
+  border-right: 2px solid #bebdbd;
 }

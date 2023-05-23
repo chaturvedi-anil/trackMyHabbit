@@ -1,5 +1,88 @@
 body
 {
     margin: 0px;
-    background: lightgrey;
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    #container
+    {
+        position: absolute;
+        top: 15%;
+        left: 38%;
+        margin-bottom: 10px !important;
+        width: 25vw;
+        font-size: 1.5rem;
+        padding: 1rem;
+        
+        box-shadow: 0px 3px 5px 0px rgb(168, 166, 166), 0px 3px 20px 0px rgb(168, 166, 166);
+        .signin
+        {
+            form
+            {
+                display: flex;
+                flex-direction: column;
+
+                input
+                {
+                    font-size: 1.5rem;
+                    padding: 0.7rem;
+                    margin: 1rem;
+                    border-radius: 50px; 
+                }
+
+                button{
+                    font-size: 1.5rem;
+                    padding: 0.7rem;
+                    margin: 1rem;
+                    border-radius: 50px;
+                    background-color: rgb(80, 116, 223);
+                    color: white;
+                }
+                button:hover
+                {
+                    background-color: rgb(32, 82, 235);
+                }
+
+            }
+        }
+
+        .or
+        {
+            margin: -2px;
+        }
+        #social-container
+        {
+            margin: 0.5rem;
+            .social
+            {
+                font-size: 1.5rem;
+                padding: 0.7rem;
+                border-radius: 50px;
+                width: 95%;
+                margin: 1rem 0rem;
+                background-color: rgb(242, 63, 63);
+                a
+                {
+                    text-decoration: none;
+                    color:white;
+                }
+            }
+
+            .social:hover{
+                background-color: red;
+            }
+        }
+        .joinNow
+        {
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .joinNow:hover
+        {
+            text-decoration: underline;
+        }
+    }
+
 }

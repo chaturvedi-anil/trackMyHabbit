@@ -1,24 +1,26 @@
 
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/css/sign_in.css">
+<title>
+    <%= title %>
+</title>
+<link rel="stylesheet" href="/css/sign_in.css">
 
-    <main>
-        <div>
-            <h1>Log In</h1>
-            <p>register yourself?
-                <a href="/users/sign-up">Sign Up</a>
-            </p>
-        </div>
-        <div class="signin">
-            <form action="/users/create-session" method="post">
-                <input type="email" name="email" id="" placeholder="email id" required>
-                <input type="password" name="password" id="" placeholder="password" required>
-                <button type="submit">Sign In</button>
-            </form>
-            <button>
-                <a href="/users/auth/google">Sign In Using Gmail</a>
-            </button>
-        </div>
-    </main>
+<div id="container">
+    <h2>Sing In</h2>
+    <hr>
+    <div class="signin">
+        <form action="/users/create-session" method="post">
+            <input type="email" name="email" id="" placeholder="email id" required>
+            <input type="password" name="password" id="" placeholder="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <p class="or"> OR </p> 
+    <div id="social-container">
+        <button class="social">
+            <a href="/users/auth/google"></i>Continue With Google</a>
+        </button>
+    </div>
+    <hr>
+    <p class="joinNow"><a href="/users/sign-up">New to trackMyHabbit? Join Now</a></p>
+</div>
+
