@@ -5,16 +5,10 @@ html {
 html body {
   margin: 0px;
   height: 100%;
-}
-
-html body header {
-  height: 10%;
+  background-color: #171717;
+  color: white;
 }
 
 html body main {
-  height: 80%;
-}
-
-html body footer {
-  height: 10%;
+  min-height: 40rem;
 }

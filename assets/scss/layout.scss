@@ -5,18 +5,11 @@ html
     {
         margin: 0px;
         height: 100%;
-
-        header
-        {
-            height: 10%;
-        }
+        background-color: rgb(23, 23, 23);
+        color: white;
         main
         {
-            height: 80%;
-        }
-        footer
-        {
-            height: 10%;
+            min-height: 40rem;
         }
     }
 }
