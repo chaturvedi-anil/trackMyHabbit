@@ -1,7 +1,51 @@
-.container {
-  position: absolute;
-  top: 15%;
-  left: 38%;
+main {
+  margin-bottom: 10px;
+}
+
+main #container {
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+main #container #sidebar {
+  width: 20%;
+  border-right: 2px solid #bebdbd;
+}
+
+main #container #sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px;
+}
+
+main #container #sidebar ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+
+main #container #sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main #container #sidebar ul li:hover {
+  text-decoration: underline;
+}
+
+main #container #main-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 60%;
+  border-right: 2px solid #bebdbd;
+}
+
+main #container #main-content-container .signup-form-container {
   width: 25vw;
   font-size: 1.5rem;
   padding: 1rem;
@@ -9,36 +53,36 @@
   box-shadow: 0px 3px 5px 0px #a8a6a6, 0px 3px 20px 0px #a8a6a6;
 }
 
-.container .signup form {
+main #container #main-content-container .signup-form-container .signup form {
   display: flex;
   flex-direction: column;
 }
 
-.container .signup form input, .container .signup form button {
+main #container #main-content-container .signup-form-container .signup form input, main #container #main-content-container .signup-form-container .signup form button {
   font-size: 1.1rem;
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 50px;
 }
 
-.container .signup form button {
+main #container #main-content-container .signup-form-container .signup form button {
   background-color: #5074df;
   color: white;
 }
 
-.container .signup form button:hover {
+main #container #main-content-container .signup-form-container .signup form button:hover {
   background-color: #2052eb;
 }
 
-.container .or {
+main #container #main-content-container .signup-form-container .or {
   margin: -2px;
 }
 
-.container .social-container {
+main #container #main-content-container .signup-form-container .social-container {
   margin: 0.5rem;
 }
 
-.container .social-container .social {
+main #container #main-content-container .signup-form-container .social-container .social {
   font-size: 1.1rem;
   padding: 0.5rem;
   border-radius: 50px;
@@ -47,20 +91,20 @@
   background-color: #f23f3f;
 }
 
-.container .social-container .social a {
+main #container #main-content-container .signup-form-container .social-container .social a {
   text-decoration: none;
   color: white;
 }
 
-.container .social-container .social:hover {
+main #container #main-content-container .signup-form-container .social-container .social:hover {
   background-color: red;
 }
 
-.container .signIn a {
+main #container #main-content-container .signup-form-container .singIn a {
   text-decoration: none;
   color: white;
 }
 
-.container .signIn:hover {
+main #container #main-content-container .signup-form-container .singIn:hover {
   text-decoration: underline;
 }

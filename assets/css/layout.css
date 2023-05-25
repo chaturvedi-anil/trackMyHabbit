@@ -1,14 +1,7 @@
-html {
-  height: 100%;
-}
-
-html body {
+body {
   margin: 0px;
-  height: 100%;
   background-color: #171717;
   color: white;
-}
-
-html body main {
-  min-height: 40rem;
+  display: flex;
+  flex-direction: column;
 }

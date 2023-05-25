@@ -4,29 +4,51 @@
 </title>
 <link rel="stylesheet" href="/css/sign_up.css">
 
-<div class="container">  	
-    <h2>Sing Up</h2>
-    <hr>
-    <div class="signup">
-        <form action="/users/create" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" id="" placeholder="email id" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder=" Confirm Password" required>
+<main>
+    <div id="container">
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <a href="/"> Home </a>
+                </li>
+                <li>
+                    <a href="/users/sign-in"> Sign In </a>
+                </li>
+                <li>
+                    <a href="/contact"> Contact Us </a>
+                </li>
+            </ul>
+        </div>
 
-            <button type="submit">Sign up</button>
-        </form>
+        <div id="main-content-container">
+            <div class="signup-form-container">  	
+                <h2>Sing Up</h2>
+                <hr>
+                <div class="signup">
+                    <form action="/users/create" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="" placeholder="email id" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="confirm_password" placeholder=" Confirm Password" required>
+            
+                        <button type="submit">Sign up</button>
+                    </form>
+                </div>
+                <p class="or"> OR </p> 
+                <div class="social-container">
+                    <button class="social">
+                        <a href="/users/auth/google"></i>Continue With Google</a>
+                    </button>
+                </div>
+                <hr>
+                <p class="signIn">
+                    <a href="/users/sign-in">Already User? Sign In</a>
+                </p>
+            
+            </div>
+        </div>
     </div>
-    <p class="or"> OR </p> 
-    <div class="social-container">
-        <button class="social">
-            <a href="/users/auth/google"></i>Continue With Google</a>
-        </button>
-    </div>
-    <hr>
-    <p class="signIn">
-        <a href="/users/sign-in">Already User? Sign In</a>
-    </p>
 
-</div>
+    
+</main>
 

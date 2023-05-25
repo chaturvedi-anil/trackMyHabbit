@@ -1,10 +1,10 @@
-#footer-container {
+footer .footer-container {
   border-top: 1px solid white;
   display: flex;
   align-items: center;
 }
 
-#footer-container p {
+footer .footer-container p {
   font-size: 1.5rem;
   color: white;
 }

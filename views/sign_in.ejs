@@ -4,25 +4,47 @@
 </title>
 <link rel="stylesheet" href="/css/sign_in.css">
 
-<div id="container">
-    <h2>Sing In</h2>
-    <hr>
-    <div class="signin">
-        <form action="/users/create-session" method="post">
-            <input type="email" name="email" id="" placeholder="email id" required>
-            <input type="password" name="password" id="" placeholder="password" required>
-            <button type="submit">Sign In</button>
-        </form>
+<main>
+
+    <div id="container">
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <a href="/"> Home </a>
+                </li>
+                <li>
+                    <a href="/users/sign-up"> Sign Up </a>
+                </li>
+                <li>
+                    <a href="/contact"> Contact Us </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="main-content-container">
+            <div class="singin-form-container">
+                <h2>Sing In</h2>
+                <hr>
+                <div class="signin">
+                    <form action="/users/create-session" method="post">
+                        <input type="email" name="email" id="" placeholder="email id" required>
+                        <input type="password" name="password" id="" placeholder="password" required>
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+                <p class="or"> OR </p> 
+                <div id="social-container">
+                    <button class="social">
+                        <a href="/users/auth/google"></i>Continue With Google</a>
+                    </button>
+                </div>
+                <hr>
+                <p class="joinNow">
+                    <a href="/users/sign-up">New to trackMyHabbit? Join Now</a>
+                </p>
+            </div>
+        </div>
     </div>
-    <p class="or"> OR </p> 
-    <div id="social-container">
-        <button class="social">
-            <a href="/users/auth/google"></i>Continue With Google</a>
-        </button>
-    </div>
-    <hr>
-    <p class="joinNow">
-        <a href="/users/sign-up">New to trackMyHabbit? Join Now</a>
-    </p>
-</div>
+
+</main>
 
