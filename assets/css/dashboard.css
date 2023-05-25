@@ -2,10 +2,6 @@ body {
   margin: 0px;
 }
 
-body h1 {
-  text-align: center;
-}
-
 body #container {
   height: 100vh;
   width: 100vw;
@@ -18,7 +14,6 @@ body #container {
 body #container #sidebar {
   height: 100vh;
   width: 20%;
-  background-color: azure;
   border-right: 2px solid #bebdbd;
 }
 
@@ -32,16 +27,21 @@ body #container #sidebar ul {
 body #container #sidebar ul li {
   list-style: none;
   font-size: 1.5rem;
-  padding: 0.2re;
+  padding: 0.3rem;
 }
 
 body #container #sidebar ul li a {
+  color: white;
   text-decoration: none;
 }
 
+body #container #sidebar ul li:hover {
+  text-decoration: underline;
+}
+
 body #container #habbit-list {
+  padding: 0.5rem;
   height: 100vh;
   width: 60%;
-  background-color: white;
   border-right: 2px solid #bebdbd;
 }

@@ -39,7 +39,7 @@ main #container #sidebar ul li:hover {
   text-decoration: underline;
 }
 
-main #container #user-details {
+main #container #contact-details {
   padding: 0.5rem;
   height: 100vh;
   width: 60%;

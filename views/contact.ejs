@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/contact.css">
+<main>
+    <div id="container">
+        <div id="sidebar">
+            <ul>
+                <%if(locals.user){ %>
+                    <li>
+                        <a href="/"> Home </a>
+                    </li>
+                    <li>
+                        <a href="/habbit/dashboard"> Dashboard </a>
+                    </li>
+                    <li>
+                        <a href="/users/profile"> Profile </a>
+                    </li>
+                    <li>
+                        <a href="/contact"> Contact Us </a>
+                    </li>
+                    <li>
+                        <a href="/users/sign-out"> Sign Out </a>
+                    </li>
+                <% } else {%> 
+                    <li>
+                        <a href="/"> Home </a>
+                    </li>
+                    <li>
+                        <a href="/contact"> Contact Us </a>
+                    </li>
+                <% }%>
+            </ul>
+        </div>
+        
+        <div id="contact-details">
+            <p>
+                Email : trackMyHabbit23@gmail.com
+            </p>
+            <p>
+                Contact Number : +91-9999999999
+            </p>
+            <p>
+                Address : Kanha palace road, street no. 6, satna, MP, India, 485001
+            </p>
+        </div>
+    </div>
+</main>

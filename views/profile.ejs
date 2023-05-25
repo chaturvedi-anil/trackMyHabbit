@@ -1,19 +1,36 @@
 
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/css/profile.css">
+<title>
+    <%= title %>
+</title>
+<link rel="stylesheet" href="/css/profile.css">
 
-    <h1>profile page</h1>
+<!-- main content -->
 
-    <p><%= user.name %></p>
-    <p><%= user.email %></p>
-
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/users/destroy-session"> Sign Out</a>
-        </li>
-    </ul>
+<main>
+    <div id="container">
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <a href="/"> Home </a>
+                </li>
+                <li>
+                    <a href="/habbit/dashboard"> Dashboard </a>
+                </li>
+                <li>
+                    <a href="/users/profile"> Profile </a>
+                </li>
+                <li>
+                    <a href="/contact"> Contact Us </a>
+                </li>
+                <li>
+                    <a href="/users/sign-out"> Sign Out </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="user-details">
+            <p><%= user.name %></p>
+            <p><%= user.email %></p>
+        </div>
+    </div>
+</main>
