@@ -3,6 +3,7 @@ main {
 }
 
 main #container {
+  height: 100vh;
   top: 20px;
   display: flex;
   flex-direction: row;
@@ -10,6 +11,7 @@ main #container {
 }
 
 main #container #sidebar {
+  height: 100vh;
   width: 20%;
   border-right: 2px solid #bebdbd;
 }
@@ -36,8 +38,61 @@ main #container #sidebar ul li:hover {
   text-decoration: underline;
 }
 
-main #container #habbit-list {
+main #container #habbit-container {
   padding: 0.5rem;
+  height: 100vh;
   width: 60%;
   border-right: 2px solid #bebdbd;
+}
+
+main #container #habbit-container .add-new-habbit {
+  float: right;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0px 4px 6px 0px #dfdddd, 0px 6px 20px 0px #dfdddd;
+}
+
+main #container #habbit-container .new-habbit-form {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 2px solid white;
+  width: 30%;
+  display: none;
+}
+
+main #container #habbit-container .new-habbit-form .close-btn {
+  float: right;
+  margin: -1.5rem;
+  background-color: red;
+  color: white;
+}
+
+main #container #habbit-container .new-habbit-form input {
+  width: 90%;
+  display: block;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  margin: 0.2rem 0;
+}
+
+main #container #habbit-container .new-habbit-form .time-option {
+  width: 95%;
+  display: block;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+}
+
+main #container #habbit-container .new-habbit-form .add-btn {
+  margin-top: 2rem !important;
+  width: 95%;
+}
+
+main #container #habbit-container .new-habbit-form .add-btn:hover {
+  background-color: #cecbcb;
 }

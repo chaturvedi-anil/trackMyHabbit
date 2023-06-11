@@ -1,12 +1,17 @@
 const mongoose=require('mongoose');
 
 const habbitSchema = new mongoose.Schema({
+    category:
+    {
+        type: String,
+        required: true
+    },
     habbit:
     {
         type: String,
         required: true
     },
-    timesofDay:
+    timeOfDay:
     {
         type: String,
         required: true

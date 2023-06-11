@@ -21,8 +21,31 @@
             </ul>
         </div>
         
-        <div id="habbit-list">
-            
+        <div id="habbit-container">
+            <div class="btn-container">
+                <button class="add-new-habbit" id="add-new-habbit-btn" onclick="showForm()">
+                    Add Habbit
+                </button>
+                <div class="new-habbit-form" id="add-habbit-form">
+                    <button type="button" class="close-btn" onclick="hideCloseBtn()">X</button>
+                    <form action="/habbit/add-new-habbit/" method="post">
+                        <input type="text" name="category" placeholder="Enter Category" required><br>
+                        <input type="text" name="habbit" placeholder="Enter Habbit" required><br>
+                        <select name="timeOfDay" class="time-option">
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="evening">Evening</option>
+                            <option value="night">Night</option>
+                        </select>
+                        <input type="hidden" name="user" value="<%=user._id%>">
+                        <input type="submit" value="Add Habbit" class="add-btn">
+                    </form>
+                </div>
+            </div>
+            <div class="habbit-list">
+                
+            </div>
         </div>
     </div>
 </main>
+<script src="/javascript/dashboard.js"></script>
