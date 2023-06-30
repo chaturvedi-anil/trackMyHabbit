@@ -43,7 +43,17 @@
                 </div>
             </div>
             <div class="habbit-list">
-                
+                <ul>
+                    <% for(let i of habbit_list){ %>
+                        <li id="habbit-details">
+                            <div class="habbit-details-container">
+                                <p> Category: <%= i.category %> </p>
+                                <p> Habbit: <%= i.habbit %> </p>
+                                <p> TimeOfDay: <%= i.timeOfDay %> </p>
+                            </div>
+                        </li>
+                    <% } %>
+                </ul>
             </div>
         </div>
     </div>

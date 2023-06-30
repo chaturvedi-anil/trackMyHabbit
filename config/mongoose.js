@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 // Connect to the MongoDB database
-mongoose.connect(`mongodb://localhost/habbit_Tracker`);
+mongoose.connect(`mongodb://localhost/trackMyHabbit`);
 
 // Get a reference to the active database connection
 const db=mongoose.connection;
